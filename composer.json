@@ -1,0 +1,16 @@
+{
+    "name": "zhemchuzhnov/test-blog",
+    "description": "PHP \u0000 MySQL",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Zhemchuzhnov Dmitriy",
+            "email": "zhemchuzhnov.d@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "slim/slim": "4.*",
+        "slim/psr7": "^1.4"
+    }
+}
