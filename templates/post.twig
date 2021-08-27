@@ -1,11 +1,12 @@
 {% extends 'base.twig' %}
 
 {% block body %}
-    <div class="container">
-        <img src="https://dummyimage.com/800x400/8970eb/e6e6f2" class="img-fluid d-block mx-auto" alt="...">
-        <h1 class="mt-3 mb-3">Blog post title</h1>
-        <span class="text-muted">Имя автора | 01.01.2021</span>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae facilis adipisci repellat. Et quasi enim nulla doloribus excepturi nihil odio amet corrupti voluptatem doloremque, accusantium quia maxime consequatur incidunt neque? Consequuntur soluta fugiat ea dolorum optio consectetur labore sed eum ad dolores rem, amet quae in eaque facilis voluptas necessitatibus assumenda cum aperiam quam obcaecati? Iusto illo quos distinctio aperiam pariatur ipsum inventore assumenda eaque perferendis. Alias nisi neque laudantium. Ipsum omnis perspiciatis totam, porro fugit voluptates eos eligendi obcaecati officia aut ducimus laboriosam nisi impedit architecto aspernatur, maxime suscipit ratione tempora placeat aperiam? Nesciunt doloremque dolorem et beatae dolore.</p>
-        </div>
-    
+	<div class="container">
+		<img src="https://dummyimage.com/800x400/8970eb/e6e6f2" class="img-fluid d-block mx-auto" alt="...">
+		<h1 class="mt-3 mb-3">{{ post.title|escape }}</h1>
+		<span class="text-muted">Имя автора |
+			{{ post.published_date|date("F d, Y") }}</span>
+		<p>{{ post.content|raw }}</p>
+	</div>
+
 {% endblock %}
